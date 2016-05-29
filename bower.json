@@ -1,0 +1,23 @@
+{
+  "name": "outre",
+  "description": "Pick unique elements in an array.",
+  "main": "outre.js",
+  "version": "0.0.0",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "unique",
+    "unique-elements",
+    "outre"
+  ],
+  "homepage": "https://github.com/volkovasystems/outre",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
