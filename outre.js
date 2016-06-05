@@ -48,10 +48,20 @@
 
 	@include:
 		{
-
+			"harden": "harden"
 		}
 	@end-include
 */
+
+if( typeof window == "undefined" ){
+	var harden = require( "harden" );
+}
+
+if( typeof window != "undefined" &&
+	!( "harden" in window ) )
+{
+	throw new Error( "harden is not defined" );
+}
 
 var outre = function outre( array ){
 	/*:
@@ -62,9 +72,23 @@ var outre = function outre( array ){
 		@end-meta-configuration
 	*/
 
+	if( !Array.isArray( array ) &&
+		!Array.isArray( this ) )
+	{
+		throw new Error( "invalid array" );
+	}
+
+	array = array || [ ];
+
+	if( Array.isArray( this ) ){
+		array = this.concat( array );
+	}
+
 	var _array = array.filter( function filter( element, index, array ){
 		return array.indexOf( element ) === index;
 	} );
+
+	harden( "outre", outre.bind( _array ), _array );
 
 	return _array;
 };

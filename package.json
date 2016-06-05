@@ -1,6 +1,6 @@
 {
   "name": "outre",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Pick unique elements in an array.",
   "main": "outre.js",
   "scripts": {
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/volkovasystems/outre/issues"
   },
-  "homepage": "https://github.com/volkovasystems/outre#readme"
+  "homepage": "https://github.com/volkovasystems/outre#readme",
+  "dependencies": {
+    "harden": "^0.3.0"
+  }
 }

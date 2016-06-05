@@ -2,7 +2,7 @@
   "name": "outre",
   "description": "Pick unique elements in an array.",
   "main": "outre.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
   ],
@@ -19,5 +19,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "harden": "^0.3.0"
+  }
 }
