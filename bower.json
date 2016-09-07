@@ -1,6 +1,6 @@
 {
   "name": "outre",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Pick unique elements in an array.",
   "main": "outre.js",
   "authors": [
@@ -21,6 +21,6 @@
     "tests"
   ],
   "dependencies": {
-    "harden": "^0.3.2"
+    "harden": "^0.3.5"
   }
 }

@@ -1,6 +1,6 @@
 "use strict";
 
-/*:
+/*;
 	@module-license:
 		The MIT License (MIT)
 		@mit-license
@@ -37,8 +37,7 @@
 			"eMail": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/outre.git",
 			"test": "outre-test.js",
-			"global": true,
-			"class": true
+			"global": true
 		}
 	@end-module-configuration
 
@@ -64,7 +63,7 @@ if( typeof window != "undefined" &&
 }
 
 var outre = function outre( array ){
-	/*:
+	/*;
 		@meta-configuration:
 			{
 				"array:required": "[*]"
