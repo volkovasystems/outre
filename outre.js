@@ -78,13 +78,13 @@ const outre = function outre( array ){
 		array = this.concat( array );
 	}
 
-	let arrayList = array.filter( function filter( element, index, array ){
+	let list = array.filter( function filter( element, index, array ){
 		return array.indexOf( element ) === index;
 	} );
 
-	harden( "outre", outre.bind( arrayList ), arrayList );
+	harden( "outre", outre.bind( list ), list );
 
-	return arrayList;
+	return list;
 };
 
 module.exports = outre;
