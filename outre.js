@@ -34,6 +34,9 @@
 			"file": "outre.js",
 			"module": "outre",
 			"author": "Richeve S. Bebedor",
+			"contributors": [
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+			],
 			"eMail": "richeve.bebedor@gmail.com",
 			"repository": "https://github.com/volkovasystems/outre.git",
 			"test": "outre-test.js",
@@ -47,22 +50,16 @@
 
 	@include:
 		{
+			"doubt": "doubt",
 			"harden": "harden"
 		}
 	@end-include
 */
 
-if( typeof window == "undefined" ){
-	var harden = require( "harden" );
-}
+const doubt = require( "doubt" );
+const harden = require( "harden" );
 
-if( typeof window != "undefined" &&
-	!( "harden" in window ) )
-{
-	throw new Error( "harden is not defined" );
-}
-
-var outre = function outre( array ){
+const outre = function outre( array ){
 	/*;
 		@meta-configuration:
 			{
@@ -71,27 +68,23 @@ var outre = function outre( array ){
 		@end-meta-configuration
 	*/
 
-	if( !Array.isArray( array ) &&
-		!Array.isArray( this ) )
-	{
+	if( !doubt( array ).AS_ARRAY && !doubt( this ).AS_ARRAY ){
 		throw new Error( "invalid array" );
 	}
 
 	array = array || [ ];
 
-	if( Array.isArray( this ) ){
+	if( doubt( this ).AS_ARRAY ){
 		array = this.concat( array );
 	}
 
-	var _array = array.filter( function filter( element, index, array ){
+	let arrayList = array.filter( function filter( element, index, array ){
 		return array.indexOf( element ) === index;
 	} );
 
-	harden( "outre", outre.bind( _array ), _array );
+	harden( "outre", outre.bind( arrayList ), arrayList );
 
-	return _array;
+	return arrayList;
 };
 
-if( typeof module != "undefined" ){
-	module.exports = outre;
-}
+module.exports = outre;
