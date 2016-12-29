@@ -68,13 +68,13 @@ const outre = function outre( array ){
 		@end-meta-configuration
 	*/
 
-	if( !doubt( array ).AS_ARRAY && !doubt( this ).AS_ARRAY ){
+	if( !doubt( array ).ARRAY && !doubt( this ).ARRAY ){
 		throw new Error( "invalid array" );
 	}
 
 	array = array || [ ];
 
-	if( doubt( this ).AS_ARRAY ){
+	if( doubt( this ).ARRAY ){
 		array = this.concat( array );
 	}
 
