@@ -51,34 +51,47 @@
 	@include:
 		{
 			"doubt": "doubt",
-			"harden": "harden"
+			"harden": "harden",
+			"protype": "protype",
+			"truly": "truly"
 		}
 	@end-include
 */
 
 const doubt = require( "doubt" );
 const harden = require( "harden" );
+const protype = require( "protype" );
+const truly = require( "truly" );
 
-const outre = function outre( array ){
+const outre = function outre( array, indexer ){
 	/*;
 		@meta-configuration:
 			{
-				"array:required": "[*]"
+				"array:required": Array,
+				"indexer": "function"
 			}
 		@end-meta-configuration
 	*/
 
-	if( !doubt( array ).ARRAY && !doubt( this ).ARRAY ){
-		throw new Error( "invalid array" );
+	if( truly( indexer ) && !protype( indexer, FUNCTION ) ){
+		throw new Error( "invalid indexer" );
 	}
 
 	array = array || [ ];
 
-	if( doubt( this ).ARRAY ){
+	if( !doubt( array, ARRAY ) ){
+		throw new Error( "invalid array" );
+	}
+
+	if( doubt( this, ARRAY ) ){
 		array = this.concat( array );
 	}
 
-	let list = array.filter( function filter( element, index, array ){
+	let list = array.filter( ( element, index ) => {
+		if( truly( indexer ) ){
+			return indexer( array, element ) === index;
+		}
+
 		return array.indexOf( element ) === index;
 	} );
 
