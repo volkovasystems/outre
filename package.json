@@ -1,6 +1,6 @@
 {
   "name": "outre",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Pick unique elements in an array.",
   "main": "outre.js",
   "support": "outre.support.js",
@@ -29,10 +29,10 @@
   "homepage": "https://github.com/volkovasystems/outre#readme",
   "dependencies": {
     "babel-runtime": "^6.22.0",
-    "doubt": "^0.8.0",
-    "harden": "^0.13.0",
-    "protype": "^0.9.0",
-    "truly": "^0.7.0"
+    "doubt": "^0.10.0",
+    "harden": "^0.14.0",
+    "protype": "^0.11.0",
+    "truly": "^0.9.0"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
