@@ -1,62 +1,62 @@
 "use strict";
 
 /*;
-	@module-license:
-		The MIT License (MIT)
-		@mit-license
-
-		Copyright (@c) 2017 Richeve Siodina Bebedor
-		@email: richeve.bebedor@gmail.com
-
-		Permission is hereby granted, free of charge, to any person obtaining a copy
-		of this software and associated documentation files (the "Software"), to deal
-		in the Software without restriction, including without limitation the rights
-		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-		copies of the Software, and to permit persons to whom the Software is
-		furnished to do so, subject to the following conditions:
-
-		The above copyright notice and this permission notice shall be included in all
-		copies or substantial portions of the Software.
-
-		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-		SOFTWARE.
-	@end-module-license
-
-	@module-configuration:
-		{
-			"package": "outre",
-			"path": "outre/outre.js",
-			"file": "outre.js",
-			"module": "outre",
-			"author": "Richeve S. Bebedor",
-			"contributors": [
-				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
-			],
-			"eMail": "richeve.bebedor@gmail.com",
-			"repository": "https://github.com/volkovasystems/outre.git",
-			"test": "outre-test.js",
-			"global": true
-		}
-	@end-module-configuration
-
-	@module-documentation:
-		Pick unique elements in an array.
-	@end-module-documentation
-
-	@include:
-		{
-			"doubt": "doubt",
-			"harden": "harden",
-			"protype": "protype",
-			"truly": "truly"
-		}
-	@end-include
-*/
+              	@module-license:
+              		The MIT License (MIT)
+              		@mit-license
+              
+              		Copyright (@c) 2017 Richeve Siodina Bebedor
+              		@email: richeve.bebedor@gmail.com
+              
+              		Permission is hereby granted, free of charge, to any person obtaining a copy
+              		of this software and associated documentation files (the "Software"), to deal
+              		in the Software without restriction, including without limitation the rights
+              		to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+              		copies of the Software, and to permit persons to whom the Software is
+              		furnished to do so, subject to the following conditions:
+              
+              		The above copyright notice and this permission notice shall be included in all
+              		copies or substantial portions of the Software.
+              
+              		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+              		IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+              		FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+              		AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+              		LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+              		OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+              		SOFTWARE.
+              	@end-module-license
+              
+              	@module-configuration:
+              		{
+              			"package": "outre",
+              			"path": "outre/outre.js",
+              			"file": "outre.js",
+              			"module": "outre",
+              			"author": "Richeve S. Bebedor",
+              			"contributors": [
+              				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+              			],
+              			"eMail": "richeve.bebedor@gmail.com",
+              			"repository": "https://github.com/volkovasystems/outre.git",
+              			"test": "outre-test.js",
+              			"global": true
+              		}
+              	@end-module-configuration
+              
+              	@module-documentation:
+              		Pick unique elements in an array.
+              	@end-module-documentation
+              
+              	@include:
+              		{
+              			"doubt": "doubt",
+              			"harden": "harden",
+              			"protype": "protype",
+              			"truly": "truly"
+              		}
+              	@end-include
+              */
 
 var doubt = require("doubt");
 var harden = require("harden");
@@ -65,13 +65,13 @@ var truly = require("truly");
 
 var outre = function outre(array, indexer) {
 	/*;
- 	@meta-configuration:
- 		{
- 			"array:required": Array,
- 			"indexer": "function"
- 		}
- 	@end-meta-configuration
- */
+                                            	@meta-configuration:
+                                            		{
+                                            			"array:required": Array,
+                                            			"indexer": "function"
+                                            		}
+                                            	@end-meta-configuration
+                                            */
 
 	if (truly(indexer) && !protype(indexer, FUNCTION)) {
 		throw new Error("invalid indexer");
@@ -101,4 +101,5 @@ var outre = function outre(array, indexer) {
 };
 
 module.exports = outre;
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm91dHJlLmpzIl0sIm5hbWVzIjpbImRvdWJ0IiwicmVxdWlyZSIsImhhcmRlbiIsInByb3R5cGUiLCJ0cnVseSIsIm91dHJlIiwiYXJyYXkiLCJpbmRleGVyIiwiRlVOQ1RJT04iLCJFcnJvciIsIkFSUkFZIiwiY29uY2F0IiwibGlzdCIsImZpbHRlciIsImVsZW1lbnQiLCJpbmRleCIsImluZGV4T2YiLCJiaW5kIiwibW9kdWxlIiwiZXhwb3J0cyJdLCJtYXBwaW5ncyI6IkFBQUE7O0FBRUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUEwREEsSUFBTUEsUUFBUUMsUUFBUyxPQUFULENBQWQ7QUFDQSxJQUFNQyxTQUFTRCxRQUFTLFFBQVQsQ0FBZjtBQUNBLElBQU1FLFVBQVVGLFFBQVMsU0FBVCxDQUFoQjtBQUNBLElBQU1HLFFBQVFILFFBQVMsT0FBVCxDQUFkOztBQUVBLElBQU1JLFFBQVEsU0FBU0EsS0FBVCxDQUFnQkMsS0FBaEIsRUFBdUJDLE9BQXZCLEVBQWdDO0FBQzdDOzs7Ozs7Ozs7QUFTQSxLQUFJSCxNQUFPRyxPQUFQLEtBQW9CLENBQUNKLFFBQVNJLE9BQVQsRUFBa0JDLFFBQWxCLENBQXpCLEVBQXVEO0FBQ3RELFFBQU0sSUFBSUMsS0FBSixDQUFXLGlCQUFYLENBQU47QUFDQTs7QUFFREgsU0FBUUEsU0FBUyxFQUFqQjs7QUFFQSxLQUFJLENBQUNOLE1BQU9NLEtBQVAsRUFBY0ksS0FBZCxDQUFMLEVBQTRCO0FBQzNCLFFBQU0sSUFBSUQsS0FBSixDQUFXLGVBQVgsQ0FBTjtBQUNBOztBQUVELEtBQUlULE1BQU8sSUFBUCxFQUFhVSxLQUFiLENBQUosRUFBMEI7QUFDekJKLFVBQVEsS0FBS0ssTUFBTCxDQUFhTCxLQUFiLENBQVI7QUFDQTs7QUFFRCxLQUFJTSxPQUFPTixNQUFNTyxNQUFOLENBQWMsVUFBRUMsT0FBRixFQUFXQyxLQUFYLEVBQXNCO0FBQzlDLE1BQUlYLE1BQU9HLE9BQVAsQ0FBSixFQUFzQjtBQUNyQixVQUFPQSxRQUFTRCxLQUFULEVBQWdCUSxPQUFoQixNQUE4QkMsS0FBckM7QUFDQTs7QUFFRCxTQUFPVCxNQUFNVSxPQUFOLENBQWVGLE9BQWYsTUFBNkJDLEtBQXBDO0FBQ0EsRUFOVSxDQUFYOztBQVFBYixRQUFRLE9BQVIsRUFBaUJHLE1BQU1ZLElBQU4sQ0FBWUwsSUFBWixDQUFqQixFQUFxQ0EsSUFBckM7O0FBRUEsUUFBT0EsSUFBUDtBQUNBLENBbkNEOztBQXFDQU0sT0FBT0MsT0FBUCxHQUFpQmQsS0FBakIiLCJmaWxlIjoib3V0cmUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcblxuLyo7XG5cdEBtb2R1bGUtbGljZW5zZTpcblx0XHRUaGUgTUlUIExpY2Vuc2UgKE1JVClcblx0XHRAbWl0LWxpY2Vuc2VcblxuXHRcdENvcHlyaWdodCAoQGMpIDIwMTcgUmljaGV2ZSBTaW9kaW5hIEJlYmVkb3Jcblx0XHRAZW1haWw6IHJpY2hldmUuYmViZWRvckBnbWFpbC5jb21cblxuXHRcdFBlcm1pc3Npb24gaXMgaGVyZWJ5IGdyYW50ZWQsIGZyZWUgb2YgY2hhcmdlLCB0byBhbnkgcGVyc29uIG9idGFpbmluZyBhIGNvcHlcblx0XHRvZiB0aGlzIHNvZnR3YXJlIGFuZCBhc3NvY2lhdGVkIGRvY3VtZW50YXRpb24gZmlsZXMgKHRoZSBcIlNvZnR3YXJlXCIpLCB0byBkZWFsXG5cdFx0aW4gdGhlIFNvZnR3YXJlIHdpdGhvdXQgcmVzdHJpY3Rpb24sIGluY2x1ZGluZyB3aXRob3V0IGxpbWl0YXRpb24gdGhlIHJpZ2h0c1xuXHRcdHRvIHVzZSwgY29weSwgbW9kaWZ5LCBtZXJnZSwgcHVibGlzaCwgZGlzdHJpYnV0ZSwgc3VibGljZW5zZSwgYW5kL29yIHNlbGxcblx0XHRjb3BpZXMgb2YgdGhlIFNvZnR3YXJlLCBhbmQgdG8gcGVybWl0IHBlcnNvbnMgdG8gd2hvbSB0aGUgU29mdHdhcmUgaXNcblx0XHRmdXJuaXNoZWQgdG8gZG8gc28sIHN1YmplY3QgdG8gdGhlIGZvbGxvd2luZyBjb25kaXRpb25zOlxuXG5cdFx0VGhlIGFib3ZlIGNvcHlyaWdodCBub3RpY2UgYW5kIHRoaXMgcGVybWlzc2lvbiBub3RpY2Ugc2hhbGwgYmUgaW5jbHVkZWQgaW4gYWxsXG5cdFx0Y29waWVzIG9yIHN1YnN0YW50aWFsIHBvcnRpb25zIG9mIHRoZSBTb2Z0d2FyZS5cblxuXHRcdFRIRSBTT0ZUV0FSRSBJUyBQUk9WSURFRCBcIkFTIElTXCIsIFdJVEhPVVQgV0FSUkFOVFkgT0YgQU5ZIEtJTkQsIEVYUFJFU1MgT1Jcblx0XHRJTVBMSUVELCBJTkNMVURJTkcgQlVUIE5PVCBMSU1JVEVEIFRPIFRIRSBXQVJSQU5USUVTIE9GIE1FUkNIQU5UQUJJTElUWSxcblx0XHRGSVRORVNTIEZPUiBBIFBBUlRJQ1VMQVIgUFVSUE9TRSBBTkQgTk9OSU5GUklOR0VNRU5ULiBJTiBOTyBFVkVOVCBTSEFMTCBUSEVcblx0XHRBVVRIT1JTIE9SIENPUFlSSUdIVCBIT0xERVJTIEJFIExJQUJMRSBGT1IgQU5ZIENMQUlNLCBEQU1BR0VTIE9SIE9USEVSXG5cdFx0TElBQklMSVRZLCBXSEVUSEVSIElOIEFOIEFDVElPTiBPRiBDT05UUkFDVCwgVE9SVCBPUiBPVEhFUldJU0UsIEFSSVNJTkcgRlJPTSxcblx0XHRPVVQgT0YgT1IgSU4gQ09OTkVDVElPTiBXSVRIIFRIRSBTT0ZUV0FSRSBPUiBUSEUgVVNFIE9SIE9USEVSIERFQUxJTkdTIElOIFRIRVxuXHRcdFNPRlRXQVJFLlxuXHRAZW5kLW1vZHVsZS1saWNlbnNlXG5cblx0QG1vZHVsZS1jb25maWd1cmF0aW9uOlxuXHRcdHtcblx0XHRcdFwicGFja2FnZVwiOiBcIm91dHJlXCIsXG5cdFx0XHRcInBhdGhcIjogXCJvdXRyZS9vdXRyZS5qc1wiLFxuXHRcdFx0XCJmaWxlXCI6IFwib3V0cmUuanNcIixcblx0XHRcdFwibW9kdWxlXCI6IFwib3V0cmVcIixcblx0XHRcdFwiYXV0aG9yXCI6IFwiUmljaGV2ZSBTLiBCZWJlZG9yXCIsXG5cdFx0XHRcImNvbnRyaWJ1dG9yc1wiOiBbXG5cdFx0XHRcdFwiSm9obiBMZW5vbiBNYWdoYW5veSA8am9obmxlbm9ubWFnaGFub3lAZ21haWwuY29tPlwiXG5cdFx0XHRdLFxuXHRcdFx0XCJlTWFpbFwiOiBcInJpY2hldmUuYmViZWRvckBnbWFpbC5jb21cIixcblx0XHRcdFwicmVwb3NpdG9yeVwiOiBcImh0dHBzOi8vZ2l0aHViLmNvbS92b2xrb3Zhc3lzdGVtcy9vdXRyZS5naXRcIixcblx0XHRcdFwidGVzdFwiOiBcIm91dHJlLXRlc3QuanNcIixcblx0XHRcdFwiZ2xvYmFsXCI6IHRydWVcblx0XHR9XG5cdEBlbmQtbW9kdWxlLWNvbmZpZ3VyYXRpb25cblxuXHRAbW9kdWxlLWRvY3VtZW50YXRpb246XG5cdFx0UGljayB1bmlxdWUgZWxlbWVudHMgaW4gYW4gYXJyYXkuXG5cdEBlbmQtbW9kdWxlLWRvY3VtZW50YXRpb25cblxuXHRAaW5jbHVkZTpcblx0XHR7XG5cdFx0XHRcImRvdWJ0XCI6IFwiZG91YnRcIixcblx0XHRcdFwiaGFyZGVuXCI6IFwiaGFyZGVuXCIsXG5cdFx0XHRcInByb3R5cGVcIjogXCJwcm90eXBlXCIsXG5cdFx0XHRcInRydWx5XCI6IFwidHJ1bHlcIlxuXHRcdH1cblx0QGVuZC1pbmNsdWRlXG4qL1xuXG5jb25zdCBkb3VidCA9IHJlcXVpcmUoIFwiZG91YnRcIiApO1xuY29uc3QgaGFyZGVuID0gcmVxdWlyZSggXCJoYXJkZW5cIiApO1xuY29uc3QgcHJvdHlwZSA9IHJlcXVpcmUoIFwicHJvdHlwZVwiICk7XG5jb25zdCB0cnVseSA9IHJlcXVpcmUoIFwidHJ1bHlcIiApO1xuXG5jb25zdCBvdXRyZSA9IGZ1bmN0aW9uIG91dHJlKCBhcnJheSwgaW5kZXhlciApe1xuXHQvKjtcblx0XHRAbWV0YS1jb25maWd1cmF0aW9uOlxuXHRcdFx0e1xuXHRcdFx0XHRcImFycmF5OnJlcXVpcmVkXCI6IEFycmF5LFxuXHRcdFx0XHRcImluZGV4ZXJcIjogXCJmdW5jdGlvblwiXG5cdFx0XHR9XG5cdFx0QGVuZC1tZXRhLWNvbmZpZ3VyYXRpb25cblx0Ki9cblxuXHRpZiggdHJ1bHkoIGluZGV4ZXIgKSAmJiAhcHJvdHlwZSggaW5kZXhlciwgRlVOQ1RJT04gKSApe1xuXHRcdHRocm93IG5ldyBFcnJvciggXCJpbnZhbGlkIGluZGV4ZXJcIiApO1xuXHR9XG5cblx0YXJyYXkgPSBhcnJheSB8fCBbIF07XG5cblx0aWYoICFkb3VidCggYXJyYXksIEFSUkFZICkgKXtcblx0XHR0aHJvdyBuZXcgRXJyb3IoIFwiaW52YWxpZCBhcnJheVwiICk7XG5cdH1cblxuXHRpZiggZG91YnQoIHRoaXMsIEFSUkFZICkgKXtcblx0XHRhcnJheSA9IHRoaXMuY29uY2F0KCBhcnJheSApO1xuXHR9XG5cblx0bGV0IGxpc3QgPSBhcnJheS5maWx0ZXIoICggZWxlbWVudCwgaW5kZXggKSA9PiB7XG5cdFx0aWYoIHRydWx5KCBpbmRleGVyICkgKXtcblx0XHRcdHJldHVybiBpbmRleGVyKCBhcnJheSwgZWxlbWVudCApID09PSBpbmRleDtcblx0XHR9XG5cblx0XHRyZXR1cm4gYXJyYXkuaW5kZXhPZiggZWxlbWVudCApID09PSBpbmRleDtcblx0fSApO1xuXG5cdGhhcmRlbiggXCJvdXRyZVwiLCBvdXRyZS5iaW5kKCBsaXN0ICksIGxpc3QgKTtcblxuXHRyZXR1cm4gbGlzdDtcbn07XG5cbm1vZHVsZS5leHBvcnRzID0gb3V0cmU7XG4iXX0=
+
+//# sourceMappingURL=outre.support.js.map
