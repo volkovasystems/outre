@@ -18,4 +18,5 @@ doubt \
 harden \
 protype \
 truly \
---save
+--save \
+--force-latest
