@@ -1,6 +1,6 @@
 {
   "name": "outre",
-  "version": "0.16.0",
+  "version": "0.17.0",
   "description": "Pick unique elements in an array.",
   "main": "outre.deploy.js",
   "support": "outre.support.js",
@@ -23,9 +23,9 @@
     "tests"
   ],
   "dependencies": {
-    "doubt": "^0.24.0",
+    "doubt": "^0.25.0",
     "harden": "^0.21.0",
     "protype": "^0.21.0",
-    "truly": "^0.17.0"
+    "truly": "^0.18.0"
   }
 }
