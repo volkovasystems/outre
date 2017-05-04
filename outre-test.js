@@ -1,6 +1,8 @@
 "use strict";
 
+const assert = require( "assert" );
 const outre = require( "./outre.js" );
 
-console.log( outre( [ 1, 2, 3, 1 ] ) );
-console.log( outre( ) );
+assert.deepEqual( outre( [ 1, 2, 3, 1 ] ), [ 1, 2, 3 ] );
+
+console.log( "ok" );
