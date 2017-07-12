@@ -51,18 +51,12 @@
               
               	@include:
               		{
-              			"doubt": "doubt",
-              			"harden": "harden",
-              			"protype": "protype",
-              			"truly": "truly"
+              			"raze": "raze"
               		}
               	@end-include
               */
 
-var doubt = require("doubt");
-var harden = require("harden");
-var protype = require("protype");
-var truly = require("truly");
+var raze = require("raze");
 
 var outre = function outre(array, indexer) {
 	/*;
@@ -74,31 +68,13 @@ var outre = function outre(array, indexer) {
                                             	@end-meta-configuration
                                             */
 
-	if (truly(indexer) && !protype(indexer, FUNCTION)) {
+	indexer = indexer || function (array, element) {return array.indexOf(element);};
+
+	if (typeof indexer != "function") {
 		throw new Error("invalid indexer");
 	}
 
-	array = array || [];
-
-	if (!doubt(array, ARRAY)) {
-		throw new Error("invalid array");
-	}
-
-	if (doubt(this, ARRAY)) {
-		array = this.concat(array);
-	}
-
-	var list = array.filter(function (element, index) {
-		if (truly(indexer)) {
-			return indexer(array, element) === index;
-		}
-
-		return array.indexOf(element) === index;
-	});
-
-	harden("outre", outre.bind(list), list);
-
-	return list;
+	return raze(array).filter(function (element, index, array) {return indexer(array, element) === index;});
 };
 
 module.exports = outre;
