@@ -1,29 +1,26 @@
 {
-  "name": "outre",
-  "version": "0.22.0",
-  "description": "Pick unique elements in an array.",
-  "main": "outre.deploy.js",
-  "support": "outre.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "unique",
-    "unique-elements",
-    "outre"
-  ],
-  "homepage": "https://github.com/volkovasystems/outre",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "raze": "^0.34.0"
-  }
+	"name": "outre",
+	"version": "0.22.0",
+	"description": "Pick unique elements in an array.",
+	"main": "outre.deploy.js",
+	"support": "outre.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"unique",
+		"unique-elements",
+		"outre"
+	],
+	"homepage": "https://github.com/volkovasystems/outre",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }
