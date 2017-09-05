@@ -63,11 +63,25 @@ const outre = require( "./outre.js" );
 
 
 //: @server:
-
 describe( "outre", ( ) => {
 
-} );
+	describe( "`outre( [ 1, 2, 3, 1, 2 ] )`", ( ) => {
+		it( "should pick unique elements in the array", ( ) => {
+			let result = outre( [ 1, 2, 3, 1, 2 ] );
 
+			assert.deepEqual( result, [ 1, 2, 3 ] );
+		} );
+	} );
+
+	describe( "`outre( [ 1, 2, 3, 3, 2, 4 ] )`", ( ) => {
+		it( "should pick unique elements in the array", ( ) => {
+			let result = outre( [ 1, 2, 3, 3, 2, 4 ] );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4 ] );
+		} );
+	} );
+
+} );
 //: @end-server
 
 

@@ -1,16 +1,46 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-09-04T08:31:38.728Z",
-    "end": "2017-09-04T08:31:38.728Z",
-    "duration": 0
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 3,
+		"tests": 2,
+		"passes": 2,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-09-05T10:22:24.637Z",
+		"end": "2017-09-05T10:22:24.643Z",
+		"duration": 6
+	},
+	"tests": [
+		{
+			"title": "should pick unique elements in the array",
+			"fullTitle": "outre `outre( [ 1, 2, 3, 1, 2 ] )` should pick unique elements in the array",
+			"duration": 3,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should pick unique elements in the array",
+			"fullTitle": "outre `outre( [ 1, 2, 3, 3, 2, 4 ] )` should pick unique elements in the array",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should pick unique elements in the array",
+			"fullTitle": "outre `outre( [ 1, 2, 3, 1, 2 ] )` should pick unique elements in the array",
+			"duration": 3,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should pick unique elements in the array",
+			"fullTitle": "outre `outre( [ 1, 2, 3, 3, 2, 4 ] )` should pick unique elements in the array",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

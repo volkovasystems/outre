@@ -67,27 +67,87 @@ const path = require( "path" );
 
 
 //: @server:
-
 describe( "outre", ( ) => {
 
-} );
+	describe( "`outre( [ 1, 2, 3, 1, 2 ] )`", ( ) => {
+		it( "should pick unique elements in the array", ( ) => {
+			let result = outre( [ 1, 2, 3, 1, 2 ] );
 
+			assert.deepEqual( result, [ 1, 2, 3 ] );
+		} );
+	} );
+
+	describe( "`outre( [ 1, 2, 3, 3, 2, 4 ] )`", ( ) => {
+		it( "should pick unique elements in the array", ( ) => {
+			let result = outre( [ 1, 2, 3, 3, 2, 4 ] );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4 ] );
+		} );
+	} );
+
+} );
 //: @end-server
 
 
 //: @client:
-
 describe( "outre", ( ) => {
 
-} );
+	describe( "`outre( [ 1, 2, 3, 1, 2 ] )`", ( ) => {
+		it( "should pick unique elements in the array", ( ) => {
+			let result = outre( [ 1, 2, 3, 1, 2 ] );
 
+			assert.deepEqual( result, [ 1, 2, 3 ] );
+		} );
+	} );
+
+	describe( "`outre( [ 1, 2, 3, 3, 2, 4 ] )`", ( ) => {
+		it( "should pick unique elements in the array", ( ) => {
+			let result = outre( [ 1, 2, 3, 3, 2, 4 ] );
+
+			assert.deepEqual( result, [ 1, 2, 3, 4 ] );
+		} );
+	} );
+
+} );
 //: @end-client
 
 
 //: @bridge:
-
 describe( "outre", ( ) => {
 
-} );
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
+	describe( "`outre( [ 1, 2, 3, 1, 2 ] )`", ( ) => {
+		it( "should pick unique elements in the array", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let test = outre( [ 1, 2, 3, 1, 2 ] );
+					return JSON.stringify( test );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ 1, 2, 3 ] );
+		} );
+	} );
+
+	describe( "`outre( [ 1, 2, 3, 3, 2, 4 ] )`", ( ) => {
+		it( "should pick unique elements in the array", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let test = outre( [ 1, 2, 3, 3, 2, 4 ] );
+					return JSON.stringify( test );
+				}
+
+			).value;
+			//: @end-ignore
+			assert.deepEqual( JSON.parse( result ), [ 1, 2, 3, 4 ] );
+		} );
+	} );
+
+} );
 //: @end-bridge

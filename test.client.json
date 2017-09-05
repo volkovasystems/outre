@@ -1,0 +1,116 @@
+{
+	"state": {
+		"passed": 2,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-09-05T10:22:25.741Z",
+	"end": "2017-09-05T10:23:08.564Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "outre",
+			"duration": 0,
+			"start": "2017-09-05T10:23:08.242Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "outre",
+			"duration": 143,
+			"start": "2017-09-05T10:23:08.243Z",
+			"end": "2017-09-05T10:23:08.386Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-09-05T10:23:08.244Z",
+					"end": "2017-09-05T10:23:08.244Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "outre",
+					"associatedTest": "should pick unique elements in the array"
+				},
+				{
+					"start": "2017-09-05T10:23:08.336Z",
+					"end": "2017-09-05T10:23:08.336Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "outre",
+					"associatedTest": "should pick unique elements in the array"
+				},
+				{
+					"start": "2017-09-05T10:23:08.337Z",
+					"end": "2017-09-05T10:23:08.337Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "outre",
+					"associatedTest": "should pick unique elements in the array"
+				},
+				{
+					"start": "2017-09-05T10:23:08.386Z",
+					"end": "2017-09-05T10:23:08.386Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "outre",
+					"associatedTest": "should pick unique elements in the array"
+				},
+				{
+					"start": "2017-09-05T10:23:08.386Z",
+					"end": "2017-09-05T10:23:08.386Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "outre"
+				}
+			]
+		},
+		{
+			"name": "`outre( [ 1, 2, 3, 1, 2 ] )`",
+			"duration": 94,
+			"start": "2017-09-05T10:23:08.243Z",
+			"end": "2017-09-05T10:23:08.337Z",
+			"tests": [
+				{
+					"name": "should pick unique elements in the array",
+					"start": "2017-09-05T10:23:08.244Z",
+					"end": "2017-09-05T10:23:08.335Z",
+					"duration": 91,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`outre( [ 1, 2, 3, 3, 2, 4 ] )`",
+			"duration": 49,
+			"start": "2017-09-05T10:23:08.337Z",
+			"end": "2017-09-05T10:23:08.386Z",
+			"tests": [
+				{
+					"name": "should pick unique elements in the array",
+					"start": "2017-09-05T10:23:08.337Z",
+					"end": "2017-09-05T10:23:08.386Z",
+					"duration": 49,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}
